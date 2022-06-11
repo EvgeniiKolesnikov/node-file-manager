@@ -1,11 +1,11 @@
+import { cd } from '../commands/dir/cd.js';
+import { exit } from '../commands/dir/exit.js';
+import { getCurrentPath } from '../utils/env.js';
 import { logInvalidInput } from '../utils/logs.js';
-import { getCurrentPath } from '../utils/path.js';
-import { cd } from './dir/cd.js';
-import { exit } from './dir/exit.js';
-import { ls } from './dir/ls.js';
-import { up } from './dir/up.js';
+import { ls } from '../commands/dir/ls.js';
+import { up } from '../commands/dir/up.js';
 
-export const command = async (input) => {
+export const onEnter = async (input) => {
   let currentPath = getCurrentPath();
 
   if (input === 'ls') {

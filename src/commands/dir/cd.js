@@ -1,7 +1,8 @@
-import { readdir } from 'fs/promises';
-import { logInvalidInput } from '../../utils/logs.js';
-import { getCurrentPath, setCurrentPath } from '../../utils/path.js';
 import { join } from 'path';
+import { readdir } from 'fs/promises';
+
+import { getCurrentPath, setCurrentPath } from '../../utils/env.js';
+import { logInvalidInput } from '../../utils/logs.js';
 
 // go to path
 export const cd = async (input) => {

@@ -1,6 +1,7 @@
 import { readdir } from 'fs/promises';
+
+import { getCurrentPath } from '../../utils/env.js';
 import { logOperationFailed } from '../../utils/logs.js';
-import { getCurrentPath } from '../../utils/path.js';
 
 // list of directory
 export const ls = async () => {

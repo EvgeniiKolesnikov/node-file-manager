@@ -1,4 +1,4 @@
-import { getCurrentPath, setCurrentPath } from '../../utils/path.js';
+import { getCurrentPath, setCurrentPath } from '../../utils/env.js';
 
 // up directory
 export const up = async () => {

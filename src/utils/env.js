@@ -6,7 +6,10 @@ export const getCurrentPath = async () => {
   return process.env.currentPath;
 };
 
-export const logCurrentPath = async () => {
-  const path = await getCurrentPath();
-  console.log(`You are currently in ${path}`);
+export const setUsername = async (name) => {
+  process.env.username = name;
+};
+
+export const getUsername = async () => {
+  return process.env.username;
 };
