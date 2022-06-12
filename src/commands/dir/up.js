@@ -1,3 +1,5 @@
+import { readdir } from 'fs/promises';
+
 import { getCurrentPath, setCurrentPath } from '../../utils/env.js';
 
 // up directory
@@ -9,5 +11,10 @@ export const up = async () => {
   const startPath = splittedPath[0] + osSeparator;
   const newPath = startPath + splittedPath.slice(1, -1).join(osSeparator);
 
-  setCurrentPath(newPath);
+  // check valid path
+  await readdir(newPath)
+    .then((content) => {
+      setCurrentPath(newPath);
+    })
+    .catch((err) => logInvalidInput());
 };
