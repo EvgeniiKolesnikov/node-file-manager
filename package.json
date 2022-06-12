@@ -1,0 +1,12 @@
+{
+    "name": "node-file-manager",
+    "version": "1.0.0",
+    "description": "File manager",
+    "type": "module",
+    "scripts": {
+      "startfast": "node src/engine/start.js --username=Evgenii",
+      "start": "node src/engine/start.js"
+    },
+    "author": "EvgeniiKolesnikov",
+    "homepage": "https://github.com/EvgeniiKolesnikov/node-file-manager"
+}
